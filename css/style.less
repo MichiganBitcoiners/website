@@ -1,0 +1,244 @@
+@import 'grid.less';
+
+// Specify the number of columns and set column and gutter widths
+@columns: 9;
+@column-width: 65;
+@gutter-width: 15;
+
+// Width threshholds for reponsive layouts.
+@small-screen-width: 568px;
+@medium-screen-width: 768px;
+
+// The base font size.
+@basesize: 90%;
+
+// Colors
+@lightbackground: white;
+@lightergray: rgb(240, 240, 240);
+@darkergray: rgb(77, 77, 77);
+@bitcoin: rgb(246, 150, 25);
+@navcolor: white;
+
+@navhover: rgb(200, 201, 230);
+
+// The following is for all devices.
+
+body {
+    color: @darkergray;
+    background-color: @lightbackground;
+    font-family: 'Open Sans', sans-serif;
+    font-size: @basesize;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#content {
+    padding: 10px;
+}
+
+header {
+    background-image: url('../images/background_upper.png');
+    background-size: 100% auto;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+header p {
+    padding: 0;
+    margin: -0.2em 0 0 0;
+}
+
+nav {
+    display: none;
+}
+
+section {
+    text-align: center;
+    padding: 0.5em 0.5em 1.5em 0.5em;
+    margin: 1em 0 1em 0;
+}
+
+.dark {
+    color: white;
+    background-color: @darkergray;
+}
+
+h1 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+}
+
+.setoff {
+    border-top: 1px solid @darkergray;
+    border-bottom: 1px solid @darkergray;
+}
+
+.dark .setoff {
+    border-top: 1px solid @lightergray;
+    border-bottom: 1px solid @lightergray;
+}
+
+ul.social {
+    padding: 0;
+}
+
+.social li {
+    list-style-type: none;
+}
+
+.social img {
+    height: 75px;
+}
+
+#contact {
+    background-image: url('../images/background_lower.png');
+    background-size: auto 100%;
+}
+
+.subscribe-button {
+    display: inline-block;
+    font-size: 1.4em;
+    height: 1.6em;
+    width: 8em;
+    color: @lightergray;
+    background-color: @darkergray;
+    text-align: center;
+    padding: 0.1em;
+    border: 1px solid black;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+a.subscribe-button {
+    text-decoration: none;
+}
+
+.qr-code {
+    width: 160px;
+    margin: 20px;
+}
+
+// The following is for tablets and PCs.
+
+@media screen and (min-width: @small-screen-width) {
+    body {
+        font-size: 1em;
+    }
+
+    #content {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        font-size: 3em;
+        padding: 50px;
+    }
+
+    header p {
+        padding: 0;
+        margin: -0.2em 0 0 0;
+    }
+
+    nav {
+        font-size: 1.5em;
+        background-color: @bitcoin;
+        text-align: center;
+        height: 50px;
+        line-height: 2em;
+        vertical-align: middle;
+        display: block;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: inline;
+        list-style-type: none;
+        margin-left: 1.5em;
+        margin-right: 2.5em;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav a:link, nav a:visited, nav a:active {
+        color: @navcolor;
+        background-color: transparent;
+    }
+
+    nav a:hover {
+        color: @darkergray;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        height: 70px;
+        z-index: 1;
+    }
+
+    .social li {
+        display: inline-block;
+        white-space: nowrap;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+// The following is for PCs.
+
+@media screen and (min-width: @medium-screen-width) {
+    #content {
+        width: 750px;
+    }
+
+    nav {
+        font-size: 1.6em;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    #why {
+        background-image: url('../images/background_middle.png');
+        background-size: 100% auto;
+    }
+
+    .setoff {
+        .row(9);
+    }
+
+    .across {
+       .column(3);
+    }
+
+    ul.social {
+        margin-top: 2em;
+    }
+
+    .social li {
+        display: inline;
+        list-style-type: none;
+        margin-left: 1.5em;
+        margin-right: 2.5em;
+    }
+}
