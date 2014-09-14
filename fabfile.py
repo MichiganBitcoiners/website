@@ -17,7 +17,12 @@ def commit_changes():
         local('hg commit')
         local('hg push')
 
+def pull_changes():
+    sudo('cd /var/www/mibtc-dev && hg pull -u',
+         user='www-data')
+
 def deploy():
     makecss()
     productionize()
     commit_changes()
+    pull_changes()
