@@ -24,6 +24,7 @@ body {
 header {
   background-image: url('../images/background_upper.png');
   background-size: 100% auto;
+  color: #f69619;
   text-align: center;
   font-size: 2.5em;
   padding: 20px;
@@ -73,7 +74,7 @@ ul.social {
   margin-right: 15px;
 }
 .social img {
-  width: 40px;
+  width: 30px;
 }
 .social a {
   text-decoration: none;
@@ -114,6 +115,7 @@ a.subscribe-button {
     margin: 0 auto;
   }
   header {
+    color: #4d4d4d;
     text-align: center;
     font-size: 3em;
     padding: 50px;
