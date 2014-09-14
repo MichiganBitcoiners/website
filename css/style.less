@@ -93,11 +93,14 @@ ul.social {
 }
 
 .social li {
-    list-style-type: none;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .social img {
-    height: 75px;
+    width: 40px;
 }
 
 .social a {
@@ -200,8 +203,12 @@ a.subscribe-button {
     .social li {
         display: inline-block;
         white-space: nowrap;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .social img {
+        width: 60px;
     }
 }
 
@@ -225,6 +232,11 @@ a.subscribe-button {
         background-size: 100% auto;
     }
 
+    #why .setoff {
+        background-image: url('../images/transparentgray.png');
+        background-size: 100% auto;
+    }
+
     .setoff {
         .row(9);
         margin-left: 0;
@@ -241,7 +253,11 @@ a.subscribe-button {
     .social li {
         display: inline;
         list-style-type: none;
-        margin-left: 1.5em;
-        margin-right: 2.5em;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .social img {
+        width: 75px;
     }
 }
