@@ -33,7 +33,7 @@ header p {
   margin: -0.2em 0 0 0;
 }
 nav {
-  font-size: 1.5em;
+  font-size: 1.4em;
   background-color: #f69619;
   text-align: center;
   line-height: 1.8em;
@@ -45,8 +45,8 @@ nav ul {
 nav li {
   display: inline;
   list-style-type: none;
-  margin-left: 1.0em;
-  margin-right: 2.0em;
+  margin-left: 0.8em;
+  margin-right: 1.6em;
 }
 nav a {
   text-decoration: none;
