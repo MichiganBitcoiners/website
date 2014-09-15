@@ -152,12 +152,6 @@ a.subscribe-button {
   nav a:hover {
     color: #4d4d4d;
   }
-  .fixed {
-    position: fixed;
-    top: 0;
-    height: 70px;
-    z-index: 1;
-  }
   .social li {
     display: inline-block;
     white-space: nowrap;
