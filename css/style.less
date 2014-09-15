@@ -39,7 +39,6 @@ body {
 header {
     background-image: url('../images/background_upper.png');
     background-size: 100% auto;
-    color: @bitcoin;
     text-align: center;
     font-size: 2.5em;
     padding: 20px;
@@ -51,13 +50,41 @@ header p {
 }
 
 nav {
-    display: none;
+    font-size: 1.5em;
+    background-color: @bitcoin;
+    text-align: center;
+    line-height: 1.8em;
+    display: block;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 1.0em;
+    margin-right: 2.0em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link, nav a:visited, nav a:active {
+    color: @navcolor;
+    background-color: transparent;
+}
+
+nav a:hover {
+    color: @darkergray;
 }
 
 section {
     text-align: center;
     padding: 0.5em 0.5em 1.5em 0.5em;
-    margin: 1em 0 1em 0;
+    margin: 0 0 1em 0;
 }
 
 .dark {
@@ -152,47 +179,18 @@ a.subscribe-button {
     }
 
     header {
-        color: @darkergray;
-        text-align: center;
         font-size: 3em;
         padding: 50px;
     }
 
-    header p {
-        padding: 0;
-        margin: -0.2em 0 0 0;
-    }
-
     nav {
         font-size: 1.5em;
-        background-color: @bitcoin;
-        text-align: center;
         line-height: 2em;
-        display: block;
-    }
-
-    nav ul {
-        margin: 0;
     }
 
     nav li {
-        display: inline;
-        list-style-type: none;
         margin-left: 1.5em;
         margin-right: 2.5em;
-    }
-
-    nav a {
-        text-decoration: none;
-    }
-
-    nav a:link, nav a:visited, nav a:active {
-        color: @navcolor;
-        background-color: transparent;
-    }
-
-    nav a:hover {
-        color: @darkergray;
     }
 
     .social li {
