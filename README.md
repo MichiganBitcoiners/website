@@ -16,11 +16,11 @@ Development Process
 -------------------
 
 Make changes to index.dev.html and style.less. index.dev.html includes
-less.js, and reads style.less. This allows you tomodify style.less and see
+less.js, and reads style.less. This allows you to modify style.less and see
 the changes by refreshing index.dev.html.
 
-The Semantic Grid system (http://semantic.gs/) is used for layout. This is
-a Less-based system for column layout.
+The Semantic Grid system (http://semantic.gs/) is a Less-based system for
+column layout.
 
 There is an issue using Chrome with less.js. It may be necessary to use
 another browser such as Firefox to see the changes to the stylesheet
