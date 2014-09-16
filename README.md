@@ -1,5 +1,5 @@
-DEVELOPMENT GUIDELINES
-======================
+Michigan Bitcoiners Website
+===========================
 
 Prerequisites
 -------------
@@ -12,16 +12,26 @@ command:
 
 See http://lesscss.org/ for information about Less.
 
-2) Install the Fabric deployment manager (optional). Bruce Webber uses this
-to deploy the files to the server. See http://www.fabfile.org/.
-
 Development Process
 -------------------
 
-index.dev.html includes less.js, and reads style.less. This allows you to
-modify style.less and see the changes by refreshing index.dev.html.
+Make changes to index.dev.html and style.less. index.dev.html includes
+less.js, and reads style.less. This allows you tomodify style.less and see
+the changes by refreshing index.dev.html.
 
-Before deploying the files to the server, style.less must be compiled to
+The Semantic Grid system (http://semantic.gs/) is used for layout. This is
+a Less-based system for column layout.
+
+There is an issue using Chrome with less.js. It may be necessary to use
+another browser such as Firefox to see the changes to the stylesheet
+when refreshing index.dev.html.
+
+index.html and style.css are generated during the deployment process.
+
+Deployment
+----------
+
+Before deploying the files to the server, compile style.less to
 style.css. On a *nix system this can be done with the command:
 
     lessc css/style.less css/style.css
@@ -30,8 +40,6 @@ or with the shell script:
 
     makecss.sh
 
-If any changes have been made to index.dev.html, these have to be reflected in
-index.html. The easiest way to do this is to run productionize_html.py with
-the command:
+Compile index.dev.html to index.html with the command:
 
     python productionize_html.py < index.dev.html > index.html
