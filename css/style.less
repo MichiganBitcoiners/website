@@ -6,7 +6,9 @@
 @gutter-width: 15;
 
 // Width threshholds for reponsive layouts.
-@small-screen-width: 568px;
+@tiny-screen-width: 400px;
+@smaller-screen-width: 520px;
+@small-screen-width: 650px;
 @medium-screen-width: 768px;
 
 // The base font size.
@@ -53,7 +55,7 @@ nav {
     font-size: 1.4em;
     background-color: @bitcoin;
     text-align: center;
-    line-height: 1.8em;
+    line-height: 1.6em;
     display: block;
 }
 
@@ -64,8 +66,8 @@ nav ul {
 nav li {
     display: inline;
     list-style-type: none;
-    margin-left: 0.8em;
-    margin-right: 1.6em;
+    margin-left: -0.4em;
+    margin-right: 1.0em;
 }
 
 nav a {
@@ -123,12 +125,12 @@ ul.social {
 .social li {
     display: inline-block;
     white-space: nowrap;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .social img {
-    width: 30px;
+    width: 40px;
 }
 
 .social a {
@@ -166,16 +168,11 @@ a.subscribe-button {
     margin: 20px;
 }
 
-// The following is for tablets and PCs.
+// The following is for small phone screens.
 
-@media screen and (min-width: @small-screen-width) {
+@media screen and (min-width: @tiny-screen-width) {
     body {
         font-size: 1em;
-    }
-
-    #content {
-        width: 550px;
-        margin: 0 auto;
     }
 
     header {
@@ -185,19 +182,75 @@ a.subscribe-button {
 
     nav {
         font-size: 1.5em;
-        line-height: 2em;
+        line-height: 1.8em;
     }
 
     nav li {
-        margin-left: 1.5em;
+        margin-left: 0em;
+        margin-right: 2.0em;
+    }
+
+    .social li {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .social img {
+        width: 35px;
+    }
+}
+
+// The following is for phones and tablets with smaller width screen.
+
+@media screen and (min-width: @smaller-screen-width) {
+    body {
+        font-size: 1em;
+    }
+
+    #content {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    header {
+        font-size: 3em;
+        padding: 50px;
+    }
+
+    nav li {
+        margin-left: 0.5em;
+        margin-right: 2.0em;
+    }
+
+    .social li {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .social img {
+        width: 50px;
+    }
+}
+
+// The following is for phones in landscape and tablets.
+@media screen and (min-width: @small-screen-width) {
+    body {
+        font-size: 1em;
+    }
+
+    #content {
+        width: 630px;
+        margin: 0 auto;
+    }
+
+    nav li {
+        margin-left: 1.0em;
         margin-right: 2.5em;
     }
 
     .social li {
-        display: inline-block;
-        white-space: nowrap;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .social img {
@@ -244,8 +297,6 @@ a.subscribe-button {
     }
 
     .social li {
-        display: inline;
-        list-style-type: none;
         margin-left: 25px;
         margin-right: 25px;
     }
