@@ -3,26 +3,22 @@ Tools for deploying the michiganbitcoiners website.
 """
 
 from fabric.api import local, sudo, env, settings
+import fabfile_env
 
-env.hosts = ['goldmoth.com']
-
-def makecss():
-    local('lessc css/style.less css/style.css')
-
-def productionize():
-    local('python productionize_html.py < index.dev.html > index.html')
+env.hosts = fabfile_env.HOSTS
 
 def commit_changes():
     with settings(warn_only=True):
-        local('hg commit')
-        local('hg push')
+        local('git commit')
+        local('git push')
 
-def pull_changes():
-    sudo('cd /var/www/mibtc-dev && hg pull -u',
-         user='www-data')
+def pull_changes_to_server():
+    sudo('cd %s && git pull -u' % fabfile_env.DIRECTORY, user=fabfile_env.USER)
+    sudo('cd %s && lessc css/style.less css/style.css' % fabfile_env.DIRECTORY,
+         user=fabfile_env.USER)
+    sudo('cd %s && python productionize_html.py < index.dev.html > index.html' %
+         fabfile_env.DIRECTORY, user=fabfile_env.USER)
 
 def deploy():
-    makecss()
-    productionize()
     commit_changes()
-    pull_changes()
+    pull_changes_to_server()

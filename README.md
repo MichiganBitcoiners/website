@@ -10,7 +10,13 @@ command:
 
     npm install -g less
 
+Alternatively, on Ubuntu you can use apt-get to install the packages nodejs
+and node_less.
+
 See http://lesscss.org/ for information about Less.
+
+If you will be deploying the files to the server, install Fabric
+(http://www.fabfile.org/).
 
 Development Process
 -------------------
@@ -31,15 +37,18 @@ index.html and style.css are generated during the deployment process.
 Deployment
 ----------
 
-Before deploying the files to the server, compile style.less to
-style.css. On a *nix system this can be done with the command:
+The deployment process requires Fabric, mentioned above. Fabric runs
+fabfile.py, which imports fabfile_env.py, which contains the configuration
+details for the particular environment.
 
-    lessc css/style.less css/style.css
+fabfile_env.py should be copied from fabfile_env.dev.py or fabfile_env.prod.py.
+fabfile_env.dev.py or fabfile_env.prod.py may be versioned; fabfile_env.py
+should not.
 
-or with the shell script:
+To deploy the files to the server, enter the command:
 
-    makecss.sh
+    fab deploy
 
-Compile index.dev.html to index.html with the command:
-
-    python productionize_html.py < index.dev.html > index.html
+This will commit and push changes to the git repository, pull them to the
+server, and compile style.css and index.html on the server. See fabfile.py
+for more selective commands..
