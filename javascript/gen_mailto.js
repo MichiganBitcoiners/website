@@ -1,4 +1,4 @@
-// Javascript email function for brucewebber.us
+// Javascript function to obfuscate the html that generates mailto links
 
 function gen_mail_to_link(lhs, rhs, subject) {
     document.write("<a href=\"mailto");
