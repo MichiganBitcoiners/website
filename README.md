@@ -41,8 +41,8 @@ The deployment process requires Fabric, mentioned above. Fabric runs
 fabfile.py, which imports fabfile_env.py, which contains the configuration
 details for the particular environment.
 
-fabfile_env.py should be copied from fabfile_env.dev.py or fabfile_env.prod.py.
-fabfile_env.dev.py or fabfile_env.prod.py may be versioned; fabfile_env.py
+fabfile_env.py should be copied from a source file such as fabfile_env.dev.py
+or fabfile_env.prod.py. These source files may be versioned; fabfile_env.py
 should not.
 
 To deploy the files to the server, enter the command:
