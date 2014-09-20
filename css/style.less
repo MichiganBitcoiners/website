@@ -222,6 +222,27 @@ a.subscribe-button {
         margin-right: 2.0em;
     }
 
+    section {
+        padding-bottom: 0.5em;
+    }
+
+    #why {
+        background-image: url('../images/background_middle_smaller.png');
+        background-size: 100% auto;
+    }
+
+    .dark .setoff {
+        border: 0;
+    }
+
+    .subsection {
+        background-image: url('../images/transparentgray.png');
+        font-size: 0.9em;
+        border-top: 1px solid @lightergray;
+        border-bottom: 1px solid @lightergray;
+        margin-bottom: 1.5em;
+    }
+
     .social li {
         margin-left: 20px;
         margin-right: 20px;
@@ -248,6 +269,11 @@ a.subscribe-button {
         margin-right: 2.5em;
     }
 
+    #why {
+        background-image: url('../images/background_middle_small.png');
+        background-size: 100% auto;
+    }
+
     .social li {
         margin-left: 25px;
         margin-right: 25px;
@@ -270,6 +296,7 @@ a.subscribe-button {
     }
 
     section {
+        padding-bottom: 2em;
         margin: 0;
     }
 
@@ -286,10 +313,20 @@ a.subscribe-button {
     .setoff {
         .row(9);
         margin-left: 0;
+        // border-top: 1px solid @darkergray;
+        // border-bottom: 1px solid @darkergray;
+    }
+
+    .dark .setoff {
+        border-top: 1px solid @lightergray;
+        border-bottom: 1px solid @lightergray;
     }
 
     .subsection {
+        background-image: none;
+        font-size: 1em;
        .column(3);
+       border: none;
     }
 
     ul.social {
