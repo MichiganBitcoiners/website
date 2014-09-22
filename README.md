@@ -10,8 +10,7 @@ command:
 
     npm install -g less
 
-Alternatively, on Ubuntu you can use apt-get to install the packages nodejs
-and node_less.
+Alternatively, on Ubuntu you can use apt-get to install the package node_less.
 
 See http://lesscss.org/ for information about Less.
 
